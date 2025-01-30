@@ -1,5 +1,7 @@
 <?php
 
+    echo("<h1>Home Page</h1>");
+
     $db_host = "c8m0261h0c7idk.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com";
     $db_port = "5432";
     $db_name = "dpe2kq3p3j0dv";
