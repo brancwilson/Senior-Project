@@ -1,6 +1,7 @@
 <?php
 
-	phpinfo();
+	echo("Test echo");
+	echo(phpinfo());
 
 	$db_host = "c8m0261h0c7idk.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com";
 	$db_port = "5432";
