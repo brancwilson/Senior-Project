@@ -13,6 +13,8 @@
 	if (!$db_conn) {
 		echo("DB Connection Failed <br>");
 		exit;
+	} else {
+		echo("DB Connection Successful");
 	}
 
 ?>
