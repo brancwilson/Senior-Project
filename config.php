@@ -21,8 +21,9 @@
 
 			$statement = $pdo->prepare('SELECT * FROM persons WHERE firstname=?');
 			$statement->execute([$firstname]);
-			$person = $statement->fetch();
-			echo($person->lastname);
+			$person = $statement->fetch(PDO::FETCH_ASSOC);
+			echo($person);
+            
 		} else {
 			echo "pdo fail...";
 		}
