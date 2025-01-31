@@ -22,7 +22,7 @@
 			$statement = $pdo->prepare('SELECT * FROM persons WHERE firstname=?');
 			$statement->execute([$firstname]);
 			$person = $statement->fetch();
-			echo($person);
+			echo($person->lastname);
 		} else {
 			echo "pdo fail...";
 		}
