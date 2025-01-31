@@ -16,7 +16,7 @@
 		$pdo = new PDO($dsn, $db_username, $db_password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 	
 		if ($pdo) {
-			echo "Connected to the $db database successfully!";
+			echo "Connected to the $db_name database successfully!";
 
 			$statement = $pdo->prepare('SELECT * FROM persons WHERE firstname=?');
 			$statement->execute([$firstname]);
