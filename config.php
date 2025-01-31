@@ -23,7 +23,7 @@
 			$statement->execute([$firstname]);
 			echo "3";
 			$person = $statement->fetch();
-			echo("Person found: " + $person);
+			echo("Person found: " + $person->firstname);
 		} else {
 			echo "pdo fail...";
 		}
