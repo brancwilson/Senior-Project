@@ -21,7 +21,7 @@
 			$statement = $pdo->prepare('SELECT * FROM persons WHERE firstname=?');
 			$statement->execute([$firstname]);
 			$person = $statement->fetch();
-			echo($person);
+			echo("Person found: " + $person);
 		}
 	} catch (PDOException $e) {
 		die($e->getMessage());
