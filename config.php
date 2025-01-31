@@ -17,13 +17,12 @@
 		if ($pdo) {
 			echo "Connected to the $db_name database successfully!";
 
-			echo"1";
+            $firstname = "Brandon";
+
 			$statement = $pdo->prepare('SELECT * FROM persons WHERE firstname=?');
-			echo"2";
 			$statement->execute([$firstname]);
-			echo "3";
 			$person = $statement->fetch();
-			echo("Person found: " + $person->firstname);
+			echo($person);
 		} else {
 			echo "pdo fail...";
 		}
