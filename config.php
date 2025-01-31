@@ -15,15 +15,13 @@
 		
 
 		if ($pdo) {
-			echo "Connected to the $db_name database successfully!";
+			echo "Connected to the $db_name database successfully!<br><br>";
 
-            $firstname = "Brandon";
+            $statement = $pdo->query('SELECT firstname FROM Persons');
+            foreach ($statement as $row) {
+                echo $row['firstname'] . "<br>";
+            }
 
-			$statement = $pdo->prepare('SELECT * FROM persons WHERE firstname=?');
-			$statement->execute([$firstname]);
-			$person = $statement->fetch(PDO::FETCH_ASSOC);
-			echo($person);
-            
 		} else {
 			echo "pdo fail...";
 		}
