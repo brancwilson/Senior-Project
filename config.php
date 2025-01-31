@@ -1,6 +1,4 @@
 <?php
-
-	echo("Test echo");
 	//echo(phpinfo());
 
 	$db_host = "c8m0261h0c7idk.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com";
@@ -14,14 +12,20 @@
 		$dsn = "pgsql:host=$db_host;port=5432;dbname=$db_name;";
 		// make a database connection
 		$pdo = new PDO($dsn, $db_username, $db_password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
-	
+		
+
 		if ($pdo) {
 			echo "Connected to the $db_name database successfully!";
 
+			echo"1";
 			$statement = $pdo->prepare('SELECT * FROM persons WHERE firstname=?');
+			echo"2";
 			$statement->execute([$firstname]);
+			echo "3";
 			$person = $statement->fetch();
 			echo("Person found: " + $person);
+		} else {
+			echo "pdo fail...";
 		}
 	} catch (PDOException $e) {
 		die($e->getMessage());
