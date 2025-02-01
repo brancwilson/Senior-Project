@@ -17,9 +17,11 @@ try {
 
     echo("PDO established...");
 
+    echo($_POST("fnInput") . " " . $_POST("lnInput") . " was added!");
+
     if ($pdo) {
 
-        echo($_POST("fnInput") . " " . $_POST("lnInput") . " was added!");
+        echo("IF PDO>>>");
 
     } else {
         echo "pdo fail...";
