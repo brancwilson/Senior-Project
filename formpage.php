@@ -10,10 +10,12 @@ $db_password = "pe20a594001c2be5002cbb2aa26bc527b13edc6673e3e1376cd4dc6753ff8923
 
 
 try {
+    echo("Connecting to database...");
     $dsn = "pgsql:host=$db_host;port=5432;dbname=$db_name;";
     // make a database connection
     $pdo = new PDO($dsn, $db_username, $db_password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 
+    echo("PDO established...");
 
     if ($pdo) {
 
@@ -23,12 +25,15 @@ try {
         echo "pdo fail...";
     }
 } catch (PDOException $e) {
+    echo("Dying...");
     die($e->getMessage());
 } finally {
     if ($pdo) {
         $pdo = null;
     }
 }
+
+echo("Made it to end...");
 
 ?>
 
