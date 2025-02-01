@@ -1,10 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Form</title>
-</head>
-<body>
+<!DOCTYPE html lang="english">
+<html>
+    <head>
+        <title>Form Page</title>
+        <script src="script.js"></script>
+    </head>
+    <body>
     <h1>Form</h1>
-</body>
+    <form method="POST">
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td>
+                    <input id="fnInput" name="fnInput" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td>
+                    <input id="lnInput" name="lnInput" type="text">
+                </td>
+            </tr>
+        </table>
+        <input id="newPersonSubmitBtn" type="submit" value="Add Person">
+    </form>
+    </body>
 </html>

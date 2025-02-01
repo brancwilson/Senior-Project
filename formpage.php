@@ -36,29 +36,3 @@ try {
 echo("Made it to end...");
 
 ?>
-
-<html lang="english">
-    <head>
-        <title>Form Page</title>
-    </head>
-    <body>
-        <h1>Form</h1>
-        <form method="POST">
-            <table>
-                <tr>
-                    <td>First Name:</td>
-                    <td>
-                        <input id="fnInput" name="fnInput" type="text">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Last Name:</td>
-                    <td>
-                        <input id="lnInput" name="lnInput" type="text">
-                    </td>
-                </tr>
-            </table>
-            <input id="newPersonSubmitBtn" type="submit" value="Add Person">
-        </form>
-    </body>
-</html>
