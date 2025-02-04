@@ -6,11 +6,15 @@ $("document").ready(function() {
 
     $("#newPersonSubmitBtn").click(function () {
         console.log("New Person Button clicked...")
+
+        var fnInputVar = $("#fnInput").val();
+        var lnInputVar = $("#lnInput").val();
+
         $.ajax({
+            method: 'POST',
             url: 'formpage.php',
-            type: 'POST',
-            data: {fnInput: $("#fnInput").val(), lnInput:$("#lnInput").val()},
-            success: function (result) {
+            data: {fnInput: fnInputVar, lnInput: lnInputVar},
+            success: function (response) {
                 alert('success');
             },
             error: function (jqXHR, textStatus, errorThrown) {
