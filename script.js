@@ -18,7 +18,7 @@ $("document").ready(function() {
                 alert('success');
             },
             error: function (jqXHR, textStatus, errorThrown) {
-                console.log("AJAX error occured...");
+                console.log("AJAX error occured..isdacioasncn.");
             }
         });
     });
