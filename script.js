@@ -11,7 +11,7 @@ $("document").ready(function() {
         var lnInputVar = $("#lnInput").val();
 
         $.ajax({
-            method: 'POST',
+            method: 'get',
             url: 'formpage.php',
             data: {fnInput: fnInputVar, lnInput: lnInputVar},
             success: function (response) {

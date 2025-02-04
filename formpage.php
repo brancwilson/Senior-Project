@@ -15,13 +15,9 @@ try {
     // make a database connection
     $pdo = new PDO($dsn, $db_username, $db_password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 
-    echo("PDO established...");
-
-    echo($_POST("fnInput") . " " . $_POST("lnInput") . " was added!");
-
     if ($pdo) {
 
-        echo("IF PDO>>>");
+        echo("true");
 
     } else {
         echo "pdo fail...";
