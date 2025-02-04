@@ -10,32 +10,27 @@ $db_password = "pe20a594001c2be5002cbb2aa26bc527b13edc6673e3e1376cd4dc6753ff8923
 
 
 try {
-    echo("Connecting to database...");
     $dsn = "pgsql:host=$db_host;port=5432;dbname=$db_name;";
     // make a database connection
     $pdo = new PDO($dsn, $db_username, $db_password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+    
 
     if ($pdo) {
+        echo "Connected to the $db_name database successfully!<br><br>";
 
-        $sql = 'SELECT * FROM Persons';
-
-        foreach ($connection->query($sql) as $row) {
-            var_dump($row);
-        }
-
+        $query = "INSERT INTO book VALUES ('$_POST[fnInput]','$_POST[lnInput]')";
+        $result = pg_query($query); 
+        
+        echo("<h1>DONE</h1>");
 
     } else {
         echo "pdo fail...";
     }
 } catch (PDOException $e) {
-    echo("Dying...");
     die($e->getMessage());
 } finally {
     if ($pdo) {
         $pdo = null;
     }
 }
-
-echo("Made it to end...");
-
 ?>
