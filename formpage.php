@@ -17,7 +17,12 @@ try {
 
     if ($pdo) {
 
-        echo("true");
+        $sql = 'SELECT * FROM Persons';
+
+        foreach ($connection->query($sql) as $row) {
+            var_dump($row);
+        }
+
 
     } else {
         echo "pdo fail...";
