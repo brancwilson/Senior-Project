@@ -11,14 +11,14 @@ $("document").ready(function() {
         var lnInputVar = $("#lnInput").val();
 
         $.ajax({
-            method: 'get',
+            method: 'POST',
             url: 'formpage.php',
             data: {fnInput: fnInputVar, lnInput: lnInputVar},
             success: function (response) {
                 alert('success');
             },
             error: function (jqXHR, textStatus, errorThrown) {
-                console.log("AJAX error occured..isdacioasncn.");
+                console.log("AJAX error occured...");
             }
         });
     });
