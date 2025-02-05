@@ -18,8 +18,12 @@ try {
     if ($pdo) {
         echo "Connected to the $db_name database successfully!<br><br>";
 
-        $query = "INSERT INTO book VALUES ('$_POST[fnInput]','$_POST[lnInput]')";
-        $result = pg_query($query); 
+        $query = "INSERT INTO Persons VALUES ('$_POST[fnInput]','$_POST[lnInput]')";
+        $result = pg_query($pdo, $query); 
+
+        if (!$result) {
+            echo("Failed");
+        }
         
         echo("<h1>DONE</h1>");
 
