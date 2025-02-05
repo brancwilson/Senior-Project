@@ -25,12 +25,11 @@ try {
 
         }
 
-        $query = "INSERT INTO Persons VALUES ($first_name, $last_name)";
+        $sql = "INSERT INTO Persons VALUES (?, ?)";
 
-        $result = pg_query($pdo, $query);
-        
-        echo("<h1>DONE</h1>");
-
+        $stmt= $pdo->prepare($sql);
+        $stmt->execute([$first_name, $last_name]);
+    
     } else {
         echo "pdo fail...";
     }
