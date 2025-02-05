@@ -24,17 +24,3 @@ $("document").ready(function() {
     });
 
 });
-
-/*
-$.ajax({
-            method: 'POST',
-            url: 'formpage.php',
-            data: {fnInput: fnInputVar, lnInput: lnInputVar},
-            success: function (response) {
-                alert('success');
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log("AJAX error occured...");
-            }
-        });
-*/

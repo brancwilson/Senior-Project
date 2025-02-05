@@ -1,7 +1,5 @@
 <?php
 
-echo("<h1>Attempting to load...</h1>");
-
 $db_host = "c8m0261h0c7idk.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com";
 $db_port = "5432";
 $db_name = "dpe2kq3p3j0dv";
@@ -16,8 +14,6 @@ try {
     
 
     if ($pdo) {
-        echo "Connected to the $db_name database successfully!<br><br>";
-
         if (isset($_POST["fnInput"]) && isset($_POST["lnInput"])) {
 
             $first_name = $_POST['fnInput'];
@@ -26,7 +22,6 @@ try {
         }
 
         $sql = "INSERT INTO Persons VALUES (?, ?)";
-
         $stmt= $pdo->prepare($sql);
         $stmt->execute([$first_name, $last_name]);
     
