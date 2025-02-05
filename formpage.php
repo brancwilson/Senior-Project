@@ -27,7 +27,7 @@ try {
 
         $query = "INSERT INTO Persons VALUES ($first_name, $last_name)";
 
-        $result = pg_query($pdo, $query);
+        //$result = pg_query($pdo, $query);
         
         echo("<h1>DONE</h1>");
 
