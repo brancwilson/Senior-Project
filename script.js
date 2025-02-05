@@ -4,7 +4,7 @@ $("document").ready(function() {
         window.location.href = "formpage.html";
     });
 
-    $("#newPersonSubmitBtn").on("submit", function(event) {
+    $("#newPersonSubmitBtn").click(function(event) {
         console.log("New Person Button clicked...")
 
         event.preventDefault();
@@ -12,11 +12,14 @@ $("document").ready(function() {
         var fnInputVar = $("#fnInput").val();
         var lnInputVar = $("#lnInput").val();
 
-        var posting = $.post('formpage.php', { s: fnInputVar, lnInputVar} );
-
-        posting.done(function() {
-            alert("DONE");
-        });
+        $.ajax({
+            url: 'formpage.php',
+            type: 'post',
+            data: {fnInput: fnInputVar, lnInput: lnInputVar},
+            success: function() {
+                alert("COMPLETE");
+            }
+        })
         
     });
 
