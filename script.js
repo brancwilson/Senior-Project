@@ -4,13 +4,26 @@ $("document").ready(function() {
         window.location.href = "formpage.html";
     });
 
-    $("#newPersonSubmitBtn").click(function () {
+    $("#newPersonSubmitBtn").on("submit", function(event) {
         console.log("New Person Button clicked...")
+
+        event.preventDefault();
 
         var fnInputVar = $("#fnInput").val();
         var lnInputVar = $("#lnInput").val();
 
-        $.ajax({
+        var posting = $.post('formpage.php', { s: fnInputVar, lnInputVar} );
+
+        posting.done(function() {
+            alert("DONE");
+        });
+        
+    });
+
+});
+
+/*
+$.ajax({
             method: 'POST',
             url: 'formpage.php',
             data: {fnInput: fnInputVar, lnInput: lnInputVar},
@@ -21,6 +34,4 @@ $("document").ready(function() {
                 console.log("AJAX error occured...");
             }
         });
-    });
-
-});
+*/
