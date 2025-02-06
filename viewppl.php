@@ -15,11 +15,11 @@ try {
 
     if ($pdo) {
         
-        //$sql = "SELECT firstname, lastname FROM Persons";
-        //$stmt= $pdo->prepare($sql);
-        //$stmt->execute();
+        $sql = "SELECT firstname, lastname FROM Persons";
+        $stmt= $pdo->prepare($sql);
+        $stmt->execute();
         
-        echo("responded.");
+        echo($stmt);
 
     }
 } catch (PDOException $e) {
