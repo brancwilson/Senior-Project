@@ -29,9 +29,8 @@ $("document").ready(function() {
         $.ajax({
             url: 'viewppl.php',
             type: 'get',
-            dataType: 'json',
             success: function(response) {
-                response = JSON.parse(response);
+                
                 console.log(response);
             }
         });

@@ -18,12 +18,8 @@ try {
         //$sql = "SELECT firstname, lastname FROM Persons";
         //$stmt= $pdo->prepare($sql);
         //$stmt->execute();
-
-        $result = [];
-        $result['first_name'] = "John";
-        $result['last_name'] = "Doe";
-
-        echo json_encode($result);
+        
+        echo("responded.");
 
     }
 } catch (PDOException $e) {
