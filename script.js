@@ -32,12 +32,16 @@ $("document").ready(function() {
             dataType: 'json',
             success: function(response) {
                 alert(response);
-            },
-            error: function(xhr, status, error) {
-                var err = JSON.parse(xhr.responseText);
-                alert(err.Message);
             }
         });
     });
 
 });
+
+/*
+,
+            error: function(xhr, status, error) {
+                var err = JSON.parse(xhr.responseText);
+                alert(err.Message);
+            }
+*/
