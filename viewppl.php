@@ -19,7 +19,12 @@ try {
         //$stmt= $pdo->prepare($sql);
         //$stmt->execute();
 
-        echo("this is a return statement");
+        $result = [];
+        $result['first_name'] = "John";
+        $result['last_name'] = "Doe";
+
+        echo json_encode($result);
+
     }
 } catch (PDOException $e) {
     die($e->getMessage());
