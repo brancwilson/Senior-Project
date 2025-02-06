@@ -30,8 +30,8 @@ $("document").ready(function() {
             url: 'viewppl.php',
             type: 'get',
             dataType: 'json',
-            success: function(response) {
-                alert(response);
+            success: function(data) {
+                alert(data);
             }
         });
     });

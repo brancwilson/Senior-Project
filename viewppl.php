@@ -15,9 +15,9 @@ try {
 
     if ($pdo) {
         
-        $sql = "SELECT firstname, lastname FROM Persons";
-        $stmt= $pdo->prepare($sql);
-        $stmt->execute();
+        //$sql = "SELECT firstname, lastname FROM Persons";
+        //$stmt= $pdo->prepare($sql);
+        //$stmt->execute();
 
         echo("this is a return statement");
     }
