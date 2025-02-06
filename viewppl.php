@@ -20,9 +20,6 @@ try {
         $stmt->execute();
 
         echo("this is a return statement");
-    
-    } else {
-        echo "pdo fail...";
     }
 } catch (PDOException $e) {
     die($e->getMessage());
