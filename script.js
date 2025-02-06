@@ -5,7 +5,7 @@ $("document").ready(function() {
     });
 
     $("#newPersonSubmitBtn").click(function(event) {
-        console.log("New Person Button clicked...")
+        console.log("New Person Button clicked...");
 
         event.preventDefault();
 
@@ -19,8 +19,21 @@ $("document").ready(function() {
             success: function() {
                 alert("COMPLETE");
             }
-        })
+        });
         
+    });
+
+    $("#viewPplBtn").click(function() {
+        console.log("View People Button clicked...");
+
+        $.ajax({
+            url: 'viewppl.php',
+            type: 'get',
+            dataType: 'json',
+            success: function(response) {
+                alert(response);
+            }
+        });
     });
 
 });
