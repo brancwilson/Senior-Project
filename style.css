@@ -1,20 +1,4 @@
-.manjari-thin {
-    font-family: "Manjari", serif;
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-.manjari-regular {
-    font-family: "Manjari", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-  
-.manjari-bold {
-    font-family: "Manjari", serif;
-    font-weight: 700;
-    font-style: normal;
-}
+@import url('https://fonts.google.com/share?selection.family=Manjari:wght@100;400;700');
 
 .optionBtn {
     background-color: #04AA6D;
