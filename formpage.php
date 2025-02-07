@@ -23,7 +23,7 @@ try {
 
         $sql = "INSERT INTO Persons VALUES (?, ?)";
         $stmt= $pdo->prepare($sql);
-        $stmt->execute([$first_name, $last_name]);
+        $stmt->execute([$last_name, $first_name]);
     
     } else {
         echo "pdo fail...";
