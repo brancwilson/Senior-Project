@@ -49,7 +49,7 @@ $("document").ready(function() {
         });
     }
 
-    $("#pplListTable tr").on("click", function() {
+    $(document).on("click", ".deleteBtn", function() {
 
         console.log("ID: " + this.ID);
         alert(this.id);
