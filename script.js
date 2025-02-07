@@ -49,8 +49,9 @@ $("document").ready(function() {
         });
     }
 
-    $("#pplListTable tr td button").on("click", function() {
+    $("#pplListTable tr").on("click", function() {
 
+        console.log("ID: " + this.ID);
         alert(this.id);
 
     });
