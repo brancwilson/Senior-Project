@@ -18,8 +18,9 @@ try {
         $sql = "SELECT firstname, lastname FROM Persons";
         $stmt= $pdo->prepare($sql);
         $stmt->execute();
-        
-        echo($stmt);
+        $converted_stmt = $stmt ? 'true' : 'false';
+
+        echo($converted_stmt);
 
     }
 } catch (PDOException $e) {
