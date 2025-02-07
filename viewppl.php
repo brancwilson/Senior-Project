@@ -15,12 +15,11 @@ try {
 
     if ($pdo) {
         
-        $sql = "SELECT firstname, lastname FROM Persons";
-        $stmt = $pdo->query($sql);
-
-        $person = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        echo($person[0]);
+        $data = $pdo->query("SELECT * FROM Persons")->fetchAll();
+        // and somewhere later:
+        foreach ($data as $row) {
+            echo $row['firstname']."<br />\n";
+        }
 
     }
 } catch (PDOException $e) {
