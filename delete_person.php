@@ -15,19 +15,7 @@ try {
 
     if ($pdo) {
         
-        $data = $pdo->query("SELECT * FROM Persons")->fetchAll();
-        // and somewhere later:
-        foreach ($data as $row => $key) {
-            echo("
-            
-            <tr>
-                <td>".$key['firstname']."</td>
-                <td>".$key['lastname']."</td>
-                <td><input type='checkbox' id='person".$row."'></td>
-            </tr>
-            
-            ");
-        }
+        
 
     }
 } catch (PDOException $e) {

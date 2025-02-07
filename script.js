@@ -1,5 +1,6 @@
 $("document").ready(function() {
     $("#pplListTable").hide();
+    $('#rmvSelectedBtn').hide();
 
     $("#goToFormPageBtn").click(function() {
         window.location.href = "formpage.html";
@@ -16,17 +17,36 @@ $("document").ready(function() {
         $.ajax({
             url: 'formpage.php',
             type: 'post',
+            //data must be sent as a key value pair - {dataName: javascriptData}
             data: {fnInput: fnInputVar, lnInput: lnInputVar},
             success: function() {
                 alert("COMPLETE");
             }
         });
         
+        loadPeopleTable();
+        
     });
 
     $("#viewPplBtn").click(function() {
         console.log("View People Button clicked...");
 
+        loadPeopleTable();
+
+    });
+
+    $("#rmvSelectedBtn").click(function() {
+        console.log("Removing selected people...");
+
+        $.ajax({
+            url: 'delete_person.php',
+            type: 'post',
+            data: {}
+        });
+    })
+
+    function loadPeopleTable() {
+        
         $("#pplListTable").empty();
 
         $.ajax({
@@ -39,6 +59,6 @@ $("document").ready(function() {
                 $("#rmvSelectedBtn").show();
             }
         });
-    });
+    }
 
 });
