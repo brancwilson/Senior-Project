@@ -18,7 +18,7 @@ try {
         $data = $pdo->query("SELECT * FROM Persons")->fetchAll();
         // and somewhere later:
         foreach ($data as $row) {
-            echo $row['firstname']."<br />\n";
+            echo($row['lastname']."<br />\n");
         }
 
     }
