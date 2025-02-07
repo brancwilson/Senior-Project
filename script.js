@@ -26,10 +26,13 @@ $("document").ready(function() {
     $("#viewPplBtn").click(function() {
         console.log("View People Button clicked...");
 
+        $("#pplListTable").empty();
+
         $.ajax({
             url: 'viewppl.php',
             type: 'get',
             success: function(response) {
+                $("#pplListTable").append("<tr><td>FIRST NAME</td><td>LAST NAME</td></tr>")
                 $("#pplListTable").append(response);
             }
         });
