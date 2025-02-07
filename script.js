@@ -49,7 +49,7 @@ $("document").ready(function() {
         });
     }
 
-    $("button").click(function(){
+    $(".deleteBtn").on("click", function(){
 
         alert(this.id);
 
