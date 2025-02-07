@@ -1,4 +1,5 @@
 $("document").ready(function() {
+    $("#rmvSelectedBtn").hide();
 
     $("#goToFormPageBtn").click(function() {
         window.location.href = "formpage.html";
@@ -34,16 +35,9 @@ $("document").ready(function() {
             success: function(response) {
                 $("#pplListTable").append("<tr><td>FIRST NAME</td><td>LAST NAME</td><td>EDIT</td></tr>")
                 $("#pplListTable").append(response);
+                $("#rmvSelectedBtn").show();
             }
         });
     });
 
 });
-
-/*
-,
-            error: function(xhr, status, error) {
-                var err = JSON.parse(xhr.responseText);
-                alert(err.Message);
-            }
-*/

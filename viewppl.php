@@ -17,13 +17,13 @@ try {
         
         $data = $pdo->query("SELECT * FROM Persons")->fetchAll();
         // and somewhere later:
-        foreach ($data as $row) {
+        foreach ($data as $value => $key) {
             echo("
             
             <tr>
                 <td>".$row['firstname']."</td>
                 <td>".$row['lastname']."</td>
-                <td><input type='checkbox'></td>
+                <td><input type='checkbox' id='".$key."'></td>
             <tr>
             
             ");
