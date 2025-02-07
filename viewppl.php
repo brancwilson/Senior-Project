@@ -24,7 +24,7 @@ try {
                 <td>".$row['firstname']."</td>
                 <td>".$row['lastname']."</td>
                 <td><input type='checkbox' id='".$key."'></td>
-            <tr>
+            </tr>
             
             ");
         }

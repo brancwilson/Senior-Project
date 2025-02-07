@@ -1,5 +1,5 @@
 $("document").ready(function() {
-    $("#rmvSelectedBtn").hide();
+    $("#pplListTable").hide();
 
     $("#goToFormPageBtn").click(function() {
         window.location.href = "formpage.html";
@@ -33,6 +33,7 @@ $("document").ready(function() {
             url: 'viewppl.php',
             type: 'get',
             success: function(response) {
+                $("#pplListTable").show();
                 $("#pplListTable").append("<tr><td>FIRST NAME</td><td>LAST NAME</td><td>EDIT</td></tr>")
                 $("#pplListTable").append(response);
                 $("#rmvSelectedBtn").show();
