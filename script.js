@@ -20,11 +20,10 @@ $("document").ready(function() {
             //data must be sent as a key value pair - {dataName: javascriptData}
             data: {fnInput: fnInputVar, lnInput: lnInputVar},
             success: function() {
+                loadPeopleTable();
                 alert("COMPLETE");
             }
         });
-        
-        loadPeopleTable();
         
     });
 
