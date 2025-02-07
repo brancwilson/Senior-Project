@@ -20,7 +20,7 @@ try {
 
         $person = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        echo($person);
+        echo($person[0]);
 
     }
 } catch (PDOException $e) {
