@@ -23,6 +23,7 @@ try {
             <tr>
                 <td>".$row['firstname']."</td>
                 <td>".$row['lastname']."</td>
+                <td><input type='checkbox'></td>
             <tr>
             
             ");
