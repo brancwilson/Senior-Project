@@ -21,9 +21,9 @@ try {
             echo("
             
             <tr>
-                <td>".$row['firstname']."</td>
-                <td>".$row['lastname']."</td>
-                <td><input type='checkbox' id='".$key."'></td>
+                <td>".$key['firstname']."</td>
+                <td>".$key['lastname']."</td>
+                <td><input type='checkbox' id='".$row."'></td>
             </tr>
             
             ");
