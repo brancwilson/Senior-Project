@@ -30,7 +30,7 @@ $("document").ready(function() {
             url: 'viewppl.php',
             type: 'get',
             success: function(response) {
-                $("pplListTable").append(response);
+                $("#pplListTable").append(response);
             }
         });
     });
