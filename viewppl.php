@@ -23,7 +23,7 @@ try {
             <tr>
                 <td>".$key['firstname']."</td>
                 <td>".$key['lastname']."</td>
-                <td><button id='delete_person".$row."'>Delete</button></td>
+                <td><button class='deleteBtn' id='delete_person".$row."'>Delete</button></td>
             </tr>
             
             ");

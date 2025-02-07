@@ -49,4 +49,10 @@ $("document").ready(function() {
         });
     }
 
+    $(".deleteBtn").click(function(){
+
+        alert(this.id);
+
+    });
+
 });
