@@ -16,11 +16,11 @@ try {
     if ($pdo) {
         
         $sql = "SELECT firstname, lastname FROM Persons";
-        $stmt= $pdo->prepare($sql);
-        $stmt->execute();
-        $converted_stmt = $stmt ? 'true' : 'false';
+        $stmt = $pdo->query($sql);
 
-        echo($converted_stmt);
+        $person = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        echo($person);
 
     }
 } catch (PDOException $e) {
