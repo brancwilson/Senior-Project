@@ -17,7 +17,7 @@ try {
         
         $data = $pdo->query("SELECT * FROM Persons")->fetchAll();
         // and somewhere later:
-        foreach ($data as $value => $key) {
+        foreach ($data as $row => $key) {
             echo("
             
             <tr>
