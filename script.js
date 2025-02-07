@@ -33,16 +33,6 @@ $("document").ready(function() {
 
     });
 
-    $("#rmvSelectedBtn").click(function() {
-        console.log("Removing selected people...");
-
-        $.ajax({
-            url: 'delete_person.php',
-            type: 'post',
-            data: {}
-        });
-    })
-
     function loadPeopleTable() {
         
         $("#pplListTable").empty();
