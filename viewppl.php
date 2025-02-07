@@ -19,7 +19,7 @@ try {
         $stmt= $pdo->prepare($sql);
         $stmt->execute();
         
-        //echo($stmt);
+        echo($stmt);
 
     }
 } catch (PDOException $e) {
