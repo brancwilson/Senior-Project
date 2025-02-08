@@ -54,7 +54,7 @@ $("document").ready(function() {
 
         console.log(this.ID);
 
-        var delID = $(this.ID);
+        var delID = $(this.ID).text();
         console.log(delID);
         var delPerson = delID.split("_");
         console.log(delPerson[1]);
