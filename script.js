@@ -53,7 +53,7 @@ $("document").ready(function() {
     $(document).on("click", ".deleteBtn", function() {
 
         console.log(this.ID);
-
+        alert(this.id);
         var delID = $(this.ID).text();
         console.log(delID);
         var delPerson = delID.split("_");
