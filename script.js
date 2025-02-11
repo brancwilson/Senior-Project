@@ -54,7 +54,7 @@ $("document").ready(function() {
 
         var delID = (this.id);
         var delPerson = delID.split("_");
-        delPerson[1];
+        alert(delPerson[1]);
 
         $.ajax({
             url: 'delete_person.php',
