@@ -62,7 +62,6 @@ $("document").ready(function() {
             data: {deletePerson: delPerson[1]},
             success: function() {
                 loadPeopleTable();
-                alert("Person deleted!");
             }
         })
 
