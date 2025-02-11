@@ -20,9 +20,9 @@ try {
 
         }
 
-        $sql = "DELETE FROM Persons WHERE firstname='?' && lastname";
+        $sql = "DELETE FROM Persons WHERE personid = ?";
         $stmt= $pdo->prepare($sql);
-        $stmt->execute([$last_name, $first_name]);
+        $stmt->execute([$toDelete]);
 
     }
 } catch (PDOException $e) {
