@@ -15,7 +15,14 @@ try {
 
     if ($pdo) {
         
-        
+        if (isset($_POST["deletePerson"])) {
+            $toDelete = $_POST["deletePerson"];
+
+        }
+
+        $sql = "DELETE FROM Persons WHERE firstname='?' && lastname";
+        $stmt= $pdo->prepare($sql);
+        $stmt->execute([$last_name, $first_name]);
 
     }
 } catch (PDOException $e) {
