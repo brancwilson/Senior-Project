@@ -21,7 +21,7 @@ try {
 
         }
 
-        $sql = "INSERT INTO Public.Persons VALUES (?, ?)";
+        $sql = "INSERT INTO Persons(lastname, firstname) VALUES (?, ?)";
         $stmt= $pdo->prepare($sql);
         $stmt->execute([$last_name, $first_name]);
     
