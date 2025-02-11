@@ -61,8 +61,9 @@ $("document").ready(function() {
             type: 'post',
             data: {deletePerson: delPerson[1]},
             success: function() {
+                loadPeopleTable();
                 alert("Person deleted!");
-            } 
+            }
         })
 
     });
